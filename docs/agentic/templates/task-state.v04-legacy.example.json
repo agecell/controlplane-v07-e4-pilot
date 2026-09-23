@@ -1,0 +1,61 @@
+{
+  "schema_version": 2,
+  "workspace_model": "REUSABLE_LANE_POOL",
+  "task_id": "STORY-101",
+  "developer": "dev-a",
+  "branch": "work/dev-a/STORY-101",
+  "base_sha": "__FULL_BASE_SHA__",
+  "candidate_sha": "__FULL_CANDIDATE_SHA__",
+  "state": "__OBSERVED_STATE__",
+  "mr_iid": null,
+  "risk_tier": 2,
+  "allocations": [],
+  "merge_mode_override": null,
+  "review": {
+    "verdict": "PENDING",
+    "candidate_sha": "__FULL_CANDIDATE_SHA__",
+    "invocation_id": "review-101-01",
+    "lane_id": "lane-02",
+    "report_ref": "__ACTUAL_REVIEW_REPORT__"
+  },
+  "merge_checks": {
+    "checked_at": "__UTC_ISO8601_AFTER_CHECK__",
+    "candidate_sha": "__FULL_CANDIDATE_SHA__",
+    "target_sha": "__FULL_VERIFIED_TARGET_SHA__",
+    "scope_valid": false,
+    "scope_valid_ref": "__ACTUAL_CHECK_REFERENCE__",
+    "dependencies_ready": false,
+    "dependencies_ready_ref": "__ACTUAL_CHECK_REFERENCE__",
+    "no_unresolved_blockers": false,
+    "no_unresolved_blockers_ref": "__ACTUAL_CHECK_REFERENCE__",
+    "remote_effects_safe": false,
+    "remote_effects_safe_ref": "__ACTUAL_CHECK_REFERENCE__",
+    "checks": {
+      "focused_tests": {
+        "status": "NOT_RUN",
+        "candidate_sha": "__FULL_CANDIDATE_SHA__",
+        "evidence_ref": "__ACTUAL_EVIDENCE__"
+      },
+      "build": {
+        "status": "NOT_RUN",
+        "candidate_sha": "__FULL_CANDIDATE_SHA__",
+        "evidence_ref": "__ACTUAL_EVIDENCE__"
+      },
+      "scope_check": {
+        "status": "NOT_RUN",
+        "candidate_sha": "__FULL_CANDIDATE_SHA__",
+        "evidence_ref": "__ACTUAL_EVIDENCE__"
+      }
+    }
+  },
+  "cleanup_checks": {
+    "checked_at": "__UTC_ISO8601_AFTER_CHECK__",
+    "retention_required": true,
+    "dependencies_clear": false,
+    "dependencies_clear_ref": "__ACTUAL_CHECK_REFERENCE__",
+    "processes_stopped": false,
+    "processes_stopped_ref": "__ACTUAL_CHECK_REFERENCE__",
+    "records_published": false,
+    "records_published_ref": "__ACTUAL_CHECK_REFERENCE__"
+  }
+}

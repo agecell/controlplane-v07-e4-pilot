@@ -1,0 +1,20 @@
+# AGENTIC-ENGINEERING:BEGIN
+# Control Plane ships these files and verifies them byte for byte against a shipped
+# baseline during upgrade. Git rewrites line endings on checkout wherever core.autocrlf
+# is on -- the Windows default -- which makes an untouched managed file differ from what
+# the installer wrote while `git status` still calls the tree clean. Pinning the kit's
+# own paths is what lets a fresh clone reproduce exactly what was installed.
+#
+# Only paths the kit owns are pinned. Your source and your documents are not touched.
+#
+# CLAUDE.md and .gitignore are deliberately absent: the kit owns a delimited block
+# inside files that are yours, merges them by content, and never compares them byte
+# for byte -- so their line endings are yours to choose.
+.gitattributes text eol=lf
+.agentic/** text eol=lf
+.claude/agents/** text eol=lf
+.claude/skills/** text eol=lf
+.claude/settings.json text eol=lf
+docs/agentic/** text eol=lf
+tools/agentic/** text eol=lf
+# AGENTIC-ENGINEERING:END

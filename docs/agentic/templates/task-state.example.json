@@ -1,0 +1,85 @@
+{
+  "schema_version": 3,
+  "workspace_model": "REUSABLE_LANE_POOL",
+  "task_id": "STORY-101",
+  "developer": "dev-a",
+  "branch": "work/dev-a/STORY-101",
+  "base_sha": "__FULL_BASE_SHA__",
+  "candidate_sha": null,
+  "state": "BUILD_PREPARED",
+  "mr_iid": null,
+  "risk_tier": 3,
+  "allocations": [],
+  "merge_mode_override": "DEVELOPER_REVIEW",
+  "contract": {
+    "schema_version": 1,
+    "contract_ref": ".agentic/local/contracts/dev-a-STORY-101.json",
+    "contract_digest": "__SHA256_CONTRACT_DIGEST__",
+    "canonical_backlog_ref": "backlog/features/FEAT-101.md",
+    "backlog_revision": "REV-03",
+    "authority_publication_sha": "__FULL_AUTHORITY_COMMIT_SHA__",
+    "story_ref": "backlog/stories/STORY-101.md",
+    "traceability_root": ["REQ-101"],
+    "ac_ids": ["AC-FUNC-01", "AC-SEC-01"],
+    "engineering_owner": {
+      "owner_ref": "team:dev-a",
+      "attestation_provider": "gitlab",
+      "attestation_identity": "dev-a-user"
+    },
+    "material_impact": ["security_privacy_data", "human_ownership"],
+    "capability_id": "FEAT-101",
+    "final_acceptance_ref": "backlog/features/FEAT-101.md#final-capability-acceptance"
+  },
+  "assurance": {
+    "schema_version": 1,
+    "policy_snapshot": {
+      "approval_ref": "__ASSURANCE_POLICY_APPROVAL_REF__",
+      "resolved_at": "__UTC_ISO8601__",
+      "project_required": [],
+      "story_required": ["security_review", "human_understanding"]
+    },
+    "pre_merge": {
+      "security_review": {
+        "gate_id": "security_review",
+        "stage": "PRE_MERGE",
+        "mode": "BOUNDED_MATERIAL",
+        "required_sources": ["story"],
+        "attestor_class": "COMPOSITE",
+        "binding_class": "CANDIDATE",
+        "status": "PENDING",
+        "binding": {
+          "contract_digest": "__SHA256_CONTRACT_DIGEST__",
+          "candidate_sha": null
+        },
+        "evidence_refs": [],
+        "attestor_ref": null,
+        "observed_at": null,
+        "revalidation": {
+          "disposition": "NOT_EVALUATED",
+          "from_binding": null,
+          "to_binding": null,
+          "assessor_class": null,
+          "assessor_ref": null
+        },
+        "waiver_ref": null,
+        "residual_risk_refs": []
+      }
+    },
+    "downstream_obligations": [
+      {
+        "gate_id": "human_understanding",
+        "stage": "POST_INTEGRATION",
+        "mode": "ASYNC_CAPABILITY",
+        "capability_id": "FEAT-101",
+        "required_sources": ["story"],
+        "evidence_plan_refs": ["backlog/features/FEAT-101.md#engineering-human-ownership"],
+        "registry_ref": null
+      }
+    ]
+  },
+  "traceability": {
+    "record_ref": null,
+    "capability_record_ref": null,
+    "release_pointer_refs": []
+  }
+}

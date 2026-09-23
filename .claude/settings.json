@@ -1,0 +1,66 @@
+{
+  "permissions": {
+    "allow": [
+      "Read",
+      "Glob",
+      "Grep",
+      "Write",
+      "Edit",
+      "Bash(git status *)",
+      "Bash(git diff *)",
+      "Bash(git log *)",
+      "Bash(git show *)",
+      "Bash(git rev-parse *)",
+      "Bash(git fetch *)",
+      "Bash(git ls-remote *)",
+      "Bash(git add *)",
+      "Bash(git commit *)",
+      "Bash(git push *)",
+      "Bash(glab mr list *)",
+      "Bash(glab mr view *)",
+      "Bash(gh pr list *)",
+      "Bash(gh pr view *)",
+      "Bash(python tools/agentic/ae.py *)",
+      "Bash(python3 tools/agentic/ae.py *)",
+      "Bash(python tools/agentic/pool.py *)",
+      "Bash(python3 tools/agentic/pool.py *)",
+      "Bash(python tools/agentic/merge.py *)",
+      "Bash(python3 tools/agentic/merge.py *)",
+      "Bash(python tools/agentic/cleanup.py *)",
+      "Bash(python3 tools/agentic/cleanup.py *)",
+      "Bash(python tools/agentic/contract.py *)",
+      "Bash(python3 tools/agentic/contract.py *)",
+      "Bash(python tools/agentic/assurance.py *)",
+      "Bash(python3 tools/agentic/assurance.py *)",
+      "Bash(python tools/agentic/pull_request.py *)",
+      "Bash(python3 tools/agentic/pull_request.py *)"
+    ],
+    "ask": [],
+    "deny": [
+      "Read(./**/.env)",
+      "Read(./**/.env.*)",
+      "Read(./**/*.pem)",
+      "Read(./**/*.key)",
+      "Edit(./.claude/settings*.json)",
+      "Write(./.claude/settings*.json)",
+      "Bash(git push *--force*)",
+      "Bash(git push *--mirror*)",
+      "Bash(git reset --hard*)",
+      "Bash(git clean -f*)"
+    ]
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash|Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python \"$CLAUDE_PROJECT_DIR/tools/agentic/guard.py\"",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "schema_version": 5,
+  "kit_version": "0.7",
+  "project_name": "__CONFIGURE__",
+  "remote": "origin",
+  "target_branch": "__CONFIGURE__",
+  "forge": {
+    "provider": "__CONFIGURE__",
+    "host": "__CONFIGURE__",
+    "repo": "__CONFIGURE__"
+  },
+  "merge_mode": "AGENT_MERGE",
+  "merge_method": "__CONFIGURE__",
+  "max_local_builders": 1,
+  "max_repo_builders": 2,
+  "max_shared_high_risk_writers": 1,
+  "remote_actions_ready": false,
+  "remote_actions_review_ref": "__CONFIGURE__",
+  "human_review_policy": "Follow organization and project requirements; enable merge_policy.human_review_required when required.",
+  "team_coordination_ref": "__CONFIGURE__",
+  "ci_policy": "__CONFIGURE__",
+  "commands": {},
+  "configuration_approved": false,
+  "language": "en",
+  "cleanup": {
+    "mode": "SAFE_MERGED",
+    "approved": false,
+    "approval_ref": "__CONFIGURE__",
+    "protected_branches": [
+      "main",
+      "master",
+      "dev",
+      "develop",
+      "trunk",
+      "production"
+    ],
+    "triggers": [
+      "after_merge_verified",
+      "resume",
+      "sprint_close"
+    ],
+    "scope": "registered_owner_story_only"
+  },
+  "ci_required": true,
+  "pool": {
+    "model": "REUSABLE_LANE_POOL",
+    "size": 7,
+    "root": ".claude/worktrees",
+    "reusable_ignored_directories": []
+  },
+  "merge_policy": {
+    "approved": false,
+    "approval_ref": "__CONFIGURE__",
+    "human_review_required": false,
+    "human_approvers": [],
+    "remote_lock_enabled": true,
+    "lock_branch": "ae/locks/integration",
+    "mandatory_checks": [
+      "focused_tests",
+      "build",
+      "scope_check"
+    ],
+    "default_checks": [],
+    "check_evidence_kinds": {}
+  },
+  "assurance_policy": {
+    "approved": false,
+    "approval_ref": "__CONFIGURE__",
+    "project_required_gates": [],
+    "tier_required_gates": {
+      "1": [],
+      "2": [],
+      "3": []
+    },
+    "human_attestors": {},
+    "waiver_policy": {
+      "default_waivable": false,
+      "gates": {}
+    },
+    "custom_gates": {}
+  },
+  "backlog_authority_ref": null
+}

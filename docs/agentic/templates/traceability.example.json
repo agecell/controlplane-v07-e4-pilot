@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "record_type": "STORY_TRACEABILITY",
+  "integration_observed_at": "__MERGED_AT__",
+  "traceability_root": ["REQ-101"],
+  "authority": {
+    "canonical_backlog": {
+      "path": "backlog/features/FEAT-101.md",
+      "revision": "REV-03",
+      "publication_sha": "__FULL_SHA__"
+    },
+    "story_card": {"path": "backlog/stories/STORY-101.md"},
+    "contract": {"digest": "__SHA256__"}
+  },
+  "story": {
+    "story_id": "STORY-101",
+    "developer": "dev-a",
+    "branch": "work/dev-a/STORY-101",
+    "risk_tier": 2,
+    "ac_ids": ["AC-FUNC-01"],
+    "engineering_owner": null,
+    "material_engineering_impact": [],
+    "capability_id": "FEAT-101",
+    "final_acceptance_ref": "backlog/features/FEAT-101.md#final-capability-acceptance"
+  },
+  "candidate_sha": "__FULL_CANDIDATE_SHA__",
+  "technical_review": {
+    "verdict": "ACCEPT",
+    "candidate_sha": "__FULL_CANDIDATE_SHA__",
+    "report_ref": "docs/agentic/records/dev-a/STORY-101/review.md",
+    "invocation_id": "review-101-01",
+    "lane_id": "lane-02"
+  },
+  "assurance": {
+    "validation_result": "ASSURANCE_PRE_MERGE_CLOSED",
+    "validation_error": null,
+    "pre_merge": [],
+    "downstream_obligations": []
+  },
+  "mr": {
+    "iid": 42,
+    "provider": "gitlab",
+    "project": "group/product",
+    "ref": "gitlab:group/product!42",
+    "source_branch": "work/dev-a/STORY-101",
+    "target_branch": "main"
+  },
+  "merge": {
+    "method": "candidate_ancestry",
+    "result_sha": "__FULL_MERGE_OR_CANDIDATE_SHA__",
+    "target_sha": "__FULL_TARGET_SHA__",
+    "ref": "git:__FULL_MERGE_OR_CANDIDATE_SHA__"
+  },
+  "downstream": {
+    "capability_record_ref": null,
+    "release_pointer_refs": []
+  },
+  "build_complete_eligible": false,
+  "notice": "Traceability index only. Integration/assurance evidence is referenced, not copied. Merge does not imply BUILD COMPLETE, deployment, or release."
+}

@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "scope_type": "CAPABILITY",
+  "capability_id": "FEAT-101",
+  "canonical_backlog_ref": "backlog/features/FEAT-101.md",
+  "backlog_revision": "REV-03",
+  "integrated_target_sha": "__FULL_INTEGRATED_TARGET_SHA__",
+  "story_inputs": [
+    {
+      "story_id": "STORY-101",
+      "developer": "dev-a",
+      "candidate_sha": "__FULL_CANDIDATE_SHA__",
+      "mr_iid": 42,
+      "merge_result_sha": "__FULL_MERGE_RESULT_SHA__",
+      "traceability_ref": "docs/agentic/records/dev-a/STORY-101/traceability.json"
+    }
+  ],
+  "gates": {
+    "human_understanding": {
+      "gate_id": "human_understanding",
+      "stage": "POST_INTEGRATION",
+      "mode": "ASYNC_CAPABILITY",
+      "required_sources": ["story"],
+      "attestor_class": "ENGINEERING_OWNER",
+      "binding_class": "INTEGRATED_CAPABILITY",
+      "status": "PENDING",
+      "binding": {
+        "contract_digest": "__CAPABILITY_DIGEST__",
+        "integrated_target_sha": "__FULL_INTEGRATED_TARGET_SHA__"
+      },
+      "evidence_refs": [],
+      "attestor_ref": null,
+      "observed_at": null,
+      "revalidation": {
+        "disposition": "NOT_EVALUATED",
+        "from_binding": null,
+        "to_binding": null,
+        "assessor_class": null,
+        "assessor_ref": null
+      },
+      "waiver_ref": null,
+      "residual_risk_refs": []
+    }
+  },
+  "product_acceptance_ref": "backlog/features/FEAT-101.md#final-capability-acceptance",
+  "product_acceptance": {
+    "status": "PENDING",
+    "evidence_ref": null,
+    "actor_ref": null,
+    "observed_at": null,
+    "integrated_target_sha": null
+  },
+  "build_complete": false,
+  "release_pointer_refs": []
+}

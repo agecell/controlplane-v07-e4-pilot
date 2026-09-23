@@ -1,0 +1,6 @@
+{
+  "allowed_paths": [
+    "src/requests/",
+    "tests/requests/"
+  ]
+}

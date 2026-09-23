@@ -1,0 +1,3 @@
+# sprint-01 / dev-a package — example
+
+Assigned list: 201 API filter; 202 filter screen depends on 201; 203 help page is independent. Each Story requirement must exist and be approved. Priority is 201, 202, 203; while 202 waits, 203 may continue because this package instruction allows it. Default one local Builder. Use the fixed pool and project merge mode. AGENT_MERGE may continue 202 after integration of 201 is verified; DEVELOPER_REVIEW waits for a human to merge 201. Validate the combined 201+202 feature. Record each MR, SHA, proof, lane release, cleanup, and blocker; no release is implied.

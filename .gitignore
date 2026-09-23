@@ -1,0 +1,7 @@
+# AGENTIC-ENGINEERING:BEGIN
+.agentic/local/
+.claude/worktrees/
+.claude/settings.local.json
+CLAUDE.local.md
+**/__pycache__/
+# AGENTIC-ENGINEERING:END

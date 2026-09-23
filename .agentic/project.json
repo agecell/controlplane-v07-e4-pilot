@@ -1,0 +1,92 @@
+{
+  "schema_version": 5,
+  "kit_version": "0.7",
+  "project_name": "Control Plane v0.7 E4 verification",
+  "remote": "origin",
+  "target_branch": "main",
+  "backlog_authority_ref": "refs/remotes/origin/main",
+  "forge": {
+    "provider": "github",
+    "host": "github.com",
+    "repo": "agecell/controlplane-v07-e4-pilot"
+  },
+  "merge_mode": "AGENT_MERGE",
+  "merge_method": "merge_commit",
+  "max_local_builders": 1,
+  "max_repo_builders": 2,
+  "max_shared_high_risk_writers": 1,
+  "remote_actions_ready": true,
+  "remote_actions_review_ref": "docs/agentic/records/SETUP-APPROVAL.md",
+  "human_review_policy": "maintainer approves each merge request by comment",
+  "team_coordination_ref": "docs/agentic/records/README.md",
+  "ci_policy": "no pipeline on this verification repository",
+  "commands": {
+    "test": "python -m unittest discover -s src -p 'test_*.py'"
+  },
+  "configuration_approved": true,
+  "language": "en",
+  "cleanup": {
+    "mode": "SAFE_MERGED",
+    "approved": true,
+    "approval_ref": "docs/agentic/records/SETUP-APPROVAL.md",
+    "protected_branches": [
+      "main",
+      "master",
+      "dev",
+      "develop",
+      "trunk",
+      "production"
+    ],
+    "triggers": [
+      "after_merge_verified",
+      "resume",
+      "sprint_close"
+    ],
+    "scope": "registered_owner_story_only"
+  },
+  "ci_required": false,
+  "pool": {
+    "model": "REUSABLE_LANE_POOL",
+    "size": 3,
+    "root": ".claude/worktrees",
+    "reusable_ignored_directories": []
+  },
+  "merge_policy": {
+    "approved": true,
+    "approval_ref": "docs/agentic/records/SETUP-APPROVAL.md",
+    "human_review_required": true,
+    "human_approvers": [
+      "agecell"
+    ],
+    "mandatory_checks": [
+      "build",
+      "scope_check"
+    ],
+    "default_checks": [
+      "focused_tests"
+    ],
+    "check_evidence_kinds": {
+      "focused_tests": [
+        "automated_test"
+      ]
+    },
+    "remote_lock_enabled": true,
+    "lock_branch": "ae/locks/integration"
+  },
+  "assurance_policy": {
+    "approved": true,
+    "approval_ref": "docs/agentic/records/SETUP-APPROVAL.md",
+    "project_required_gates": [],
+    "tier_required_gates": {
+      "1": [],
+      "2": [],
+      "3": []
+    },
+    "human_attestors": {},
+    "waiver_policy": {
+      "default_waivable": false,
+      "gates": {}
+    },
+    "custom_gates": {}
+  }
+}

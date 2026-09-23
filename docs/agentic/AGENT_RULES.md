@@ -1,0 +1,23 @@
+# Initial agent rules — v0.5 (v0.4 execution baseline + v0.5 assurance overlay)
+
+Operate under `OPERATING_RULES.md`, `.agentic/project.json`, and legitimate project decisions. These instructions are loaded from `CLAUDE.md`. Do not load every guide into context when one brief is enough.
+
+- One Control Plane belongs to one developer. Work only on approved assignments; do not redefine sprint priority or product requirements.
+- **Branch follows Story; folder follows fixed lane; role follows assignment.** The standard pool is seven lanes plus the coordinator checkout. Folder count is not active-Builder count.
+- New-project default is **AGENT_MERGE**: after quality gates and project policy are satisfied, main or Integrator may execute one MR through the helper. **DEVELOPER_REVIEW** stops the agent at MR ready for human review. A task may only make the mode stricter, never broaden project authority.
+- Defaults do not mean configuration has been approved. `configuration_approved`, `remote_actions_ready`, `merge_policy.approved`, `cleanup.approved`, and `assurance_policy.approved` are set by a maintainer after review. Never change them yourself to remove a blocker.
+- Use `pool.py` from the coordinator checkout for init, lease, release, and status. Do not create a folder per Story; do not use `isolation: worktree` for this pool flow. Lane folders remain after a Story finishes.
+- Every invocation receives: ID, Story, role, lane, token/generation, absolute workspace, base/candidate SHA, source boundaries, tests, records path, and terminal state. Preparing a lane is not proof that a subagent was invoked.
+- Every tool call must specify the correct cwd/path; never rely on `cd` from a previous call. Read relevant nested source rules without treating them as authority to modify coordinator policy.
+- BUILD/FIX writes only on the leased branch and lane. Reviewer/Prep are read-only. QA runs only authorized tests on the exact snapshot. Reviewer has no shell or write tools.
+- The author is not the independent reviewer of their own candidate. Tier 1 may be reviewed by main when main was not the writer; Tier 2/3 use a REVIEW invocation and lane that never built that Story. Every review is bound to the full SHA.
+- Process routine outcomes immediately: candidate → review; proof request → QA; named defect → Builder/Fix Owner; ACCEPT → MR and merge-mode handling. Default to one automatic fix cycle, then diagnose if still unresolved.
+- New v0.5 BUILD work must bind to normalized Story contract schema 1 and task manifest schema 3. Effective assurance = project + Tier + Story; fast path remains empty when there is no additional obligation. An agent must never create human attestation or mark a gate PASS without valid evidence/binding.
+- After source activity stops and results are saved, release the lease with proof that processes stopped. Do not move a folder still being read/written by an agent or server. Preserve uncommitted/untracked work.
+- Main writes records on `ae/records/<developer>/<sprint>`. Source lives on `work/<developer>/<story>`. Never add review reports to frozen source.
+- Before merge, verify live forge state, source SHA, target, CI/QA, review, scope, dependencies, pipeline effects, and every mandatory PRE_MERGE assurance gate. `AGENT_MERGE` may continue only when gates are validly closed; `DEVELOPER_REVIEW` may hand pending assurance to the human but must not erase the obligation. The helper manages an integration lease for clients following this kit. Never bypass server rules, fabricate human approval/attestation, or direct-push the target.
+- After verified merge: write the traceability index. If POST_INTEGRATION obligations exist, update capability assurance; `BUILD COMPLETE` requires product acceptance + mandatory engineering capability assurance and still does not grant deploy/release authority. Then clean up safe Story branches while keeping the pool intact. Record CLEANUP_PENDING with reason, owner, and review trigger. Cleanup of an old task must never overwrite a lane checkout already reused by a new Story.
+- `/ae-status` and `--check` do not authorize mutation. Stop halts new dispatch. UNKNOWN/RECOVERY_REQUIRED is not DONE; inspect facts before retrying. No unattended work continues after the session closes.
+- Merge does not authorize deployment, release, operational migration, deletion of real data, or destructive actions. Organization, tool, and device permissions still apply.
+
+Read `POOL.md` for folders/leases; `MERGE_POLICY.md` for merge; `ASSURANCE.md` for gates/attestation/capability; `TRACEABILITY.md` for records; `MIGRATION.md` for legacy v0.4; `CLEANUP.md` for branches; `CONTROLS.md` for safety boundaries. All examples are fictional.

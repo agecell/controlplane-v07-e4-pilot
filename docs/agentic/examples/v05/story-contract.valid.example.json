@@ -1,0 +1,67 @@
+{
+  "contract_schema_version": 1,
+  "story_id": "STORY-101",
+  "assigned_developer": "dev-a",
+  "sprint": "sprint-01",
+  "risk_tier": 3,
+  "publication": {
+    "canonical_backlog": {
+      "path": "backlog/features/FEAT-101.md",
+      "revision": "REV-03",
+      "publication_sha": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "blob_sha": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+    },
+    "story_card": {
+      "path": "backlog/stories/STORY-101.md",
+      "publication_sha": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "blob_sha": "cccccccccccccccccccccccccccccccccccccccc"
+    }
+  },
+  "traceability_root": [
+    "REQ-101"
+  ],
+  "ac_ids": [
+    "AC-FUNC-01",
+    "AC-SEC-01"
+  ],
+  "scope_ref": "backlog/features/FEAT-101.md#scope--non-scope",
+  "preserve_ref": "backlog/features/FEAT-101.md#scope--non-scope",
+  "dependency_ref": "backlog/features/FEAT-101.md#dependency-graph",
+  "engineering_owner": {
+    "owner_ref": "team:dev-a",
+    "attestation_provider": "gitlab",
+    "attestation_identity": "dev-a-user"
+  },
+  "engineering_impact": {
+    "architecture": "MATERIAL",
+    "scalability_nfr": "ROUTINE",
+    "security_privacy_data": "MATERIAL",
+    "operability_recovery": "MATERIAL",
+    "human_ownership": "MATERIAL",
+    "traceability_audit": "MATERIAL"
+  },
+  "story_required_assurance": [
+    {
+      "gate_id": "architecture_review",
+      "stage": "PRE_MERGE",
+      "mode": "CONFORMANCE",
+      "evidence_plan_ref": "backlog/features/FEAT-101.md#review--assurance-plan"
+    },
+    {
+      "gate_id": "security_review",
+      "stage": "PRE_MERGE",
+      "mode": "BOUNDED_MATERIAL",
+      "evidence_plan_ref": "backlog/features/FEAT-101.md#review--assurance-plan"
+    },
+    {
+      "gate_id": "human_understanding",
+      "stage": "POST_INTEGRATION",
+      "mode": "ASYNC_CAPABILITY",
+      "evidence_plan_ref": "backlog/features/FEAT-101.md#engineering--human-ownership"
+    }
+  ],
+  "merge_mode_override": "DEVELOPER_REVIEW",
+  "build_start_ref": "backlog/features/FEAT-101.md#build-start-checklist",
+  "final_acceptance_ref": "backlog/features/FEAT-101.md#final-capability-acceptance",
+  "capability_id": "FEAT-101"
+}

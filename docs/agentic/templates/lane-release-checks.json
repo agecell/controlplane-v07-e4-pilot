@@ -1,0 +1,8 @@
+{
+  "lease_token": "__CURRENT_LOCAL_TOKEN__",
+  "checked_at": "__UTC_ISO8601_AFTER_CHECK__",
+  "processes_stopped": false,
+  "processes_stopped_ref": "__ACTUAL_PROCESS_CHECK__",
+  "records_saved": false,
+  "records_saved_ref": "__ACTUAL_REPORT_REFERENCE__"
+}
