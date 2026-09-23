@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "record_type": "STORY_TRACEABILITY",
+  "integration_observed_at": "2026-09-23T01:01:06Z",
+  "traceability_root": [
+    "REQ-D1"
+  ],
+  "authority": {
+    "canonical_backlog": {
+      "path": "backlog/features/FEAT-D1.md",
+      "revision": "REV-01",
+      "publication_sha": "63c769322d5ad3bac583fe8a697f7f3c3285e801"
+    },
+    "story_card": {
+      "path": "backlog/stories/STORY-D1.md"
+    },
+    "contract": {
+      "digest": "385ebf28f2d48483dbf57ad8cb920bb2e315f698a4e761cfb159726dc324ba58"
+    }
+  },
+  "story": {
+    "story_id": "STORY-D1",
+    "developer": "agecell",
+    "branch": "work/agecell/STORY-D1",
+    "risk_tier": 1,
+    "ac_ids": [
+      "AC-D1-SLUGIFY",
+      "AC-D1-TESTS"
+    ],
+    "engineering_owner": null,
+    "material_engineering_impact": [],
+    "capability_id": "FEAT-D1",
+    "final_acceptance_ref": "backlog/features/FEAT-D1.md#final-capability-acceptance"
+  },
+  "candidate_sha": "7b9c9d762eacb208a61398bee49b3069a33e29f7",
+  "technical_review": {
+    "verdict": "ACCEPT",
+    "candidate_sha": "7b9c9d762eacb208a61398bee49b3069a33e29f7",
+    "report_ref": "docs/agentic/records/agecell/STORY-D1/review-report.md",
+    "invocation_id": "review-d1",
+    "lane_id": "lane-02"
+  },
+  "assurance": {
+    "validation_result": "ASSURANCE_PRE_MERGE_CLOSED",
+    "validation_error": null,
+    "pre_merge": [],
+    "downstream_obligations": []
+  },
+  "mr": {
+    "iid": 1,
+    "provider": "github",
+    "project": "agecell/controlplane-v07-e4-pilot",
+    "ref": "github:agecell/controlplane-v07-e4-pilot!1",
+    "source_branch": "work/agecell/STORY-D1",
+    "target_branch": "main"
+  },
+  "merge": {
+    "method": "candidate_ancestry",
+    "result_sha": "57df51bab324fd264d1e912cb4afd948bdbf855c",
+    "target_sha": "57df51bab324fd264d1e912cb4afd948bdbf855c",
+    "ref": "git:57df51bab324fd264d1e912cb4afd948bdbf855c"
+  },
+  "downstream": {
+    "capability_record_ref": null,
+    "release_pointer_refs": []
+  },
+  "build_complete_eligible": false,
+  "notice": "Traceability index only. Integration/assurance evidence is referenced, not copied. Merge does not imply BUILD COMPLETE, deployment, or release."
+}
